@@ -1,12 +1,20 @@
 {% extends "base_books.html" %}
 
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'books/css/booksIndex.css' %}" />
+{% endblock %}
+
 {% block content %}
-    <h2>도서 / 저자 / 출판사</h2>
-    <ul>
-        {% for modelname in model_list %}
-{% with "books:"|add:modelname|lower|add:"_list" as urlvar %}
-        <li><a href="{% url urlvar %}">{{ modelname }}</a></li>
-{% endwith %}
-        {% endfor %}
-    </ul>
+    <div id="menuDiv">
+        <h2>공부할 때 참고한 도서</h2>
+        <ul>
+            {% for modelname in model_list %}
+    {% with "books:"|add:modelname|lower|add:"_list" as urlvar %}
+            <li><a href="{% url urlvar %}">{{ modelname }}</a></li>
+    {% endwith %}
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock content %}

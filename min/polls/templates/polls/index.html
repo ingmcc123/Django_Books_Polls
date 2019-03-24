@@ -1,0 +1,24 @@
+{% extends "base_polls.html" %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'polls/css/pollsIndex.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="yellowDiv1">
+    <h2>질문 5선</h2>
+    <div id="yellowDiv2">
+    {% if latest_question_list %}
+        <ol>
+        {% for question in latest_question_list %}
+            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+    <div id="yellowDiv2">
+</div>
+{% endblock content %}

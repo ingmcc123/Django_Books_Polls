@@ -1,0 +1,24 @@
+#body {
+    background-image: url("../img/bgImg/bookIndex.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#menuDiv {
+    background-color: rgba(255, 255, 150, 0.8);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 50px;
+    transform: rotate(-15deg);
+}
+#menuDiv h2, #menuDiv ul {
+    transform: rotate(15deg);
+}
+#menuDiv h2 {
+    text-align: center;
+}
+#menuDiv ul li {
+    padding-top: 20px;
+    list-style-type: none;
+    margin-left: 5%;
+}

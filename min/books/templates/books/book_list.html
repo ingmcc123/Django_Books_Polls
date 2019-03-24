@@ -1,10 +1,16 @@
 {% extends "base_books.html" %}
 
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'books/css/booksList.css' %}" />
+{% endblock %}
+
 {% block content %}
     <h2>도서 목록</h2>
-    <ul>
+    <table>
         {% for book in object_list %}
-            <li><a href="{% url 'books:book_detail' book.id %}">{{ book.title }}</a></li>
+        <tr><td><a href="{% url 'books:book_detail' book.id %}">{{ book.title }}</a></td></tr>
         {% endfor %}
-    </ul>
+    </table>
 {% endblock content %}

@@ -6,7 +6,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['app_list'] = ['books']
+        context['app_list'] = ['books', 'polls']
         dictVerbose = {}
         for app in apps.get_app_configs():
             if 'site-packages' not in app.path:

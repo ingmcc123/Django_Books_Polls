@@ -1,6 +1,12 @@
 {% extends "base_books.html" %}
 
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'books/css/booksDetail.css' %}" />
+{% endblock %}
+
 {% block content %}
-<h1>{{ object.name }}</h1>
-<p>{{ object.website }}</p>
+<h2>{{ object.name }}</h2>
+<p style="text-align:center"><a href="{{ object.website }}">{{ object.website }}</a></p>
 {% endblock content %}

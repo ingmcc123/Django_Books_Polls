@@ -1,0 +1,25 @@
+#body {
+    background-image: url("../img/bgImg/pollIndex.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#yellowDiv1 {
+    background-color: rgba(255, 255, 150, 0.9);
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    padding: 50px;
+    transform: rotate(-15deg);
+}
+#yellowDiv1 h2, #yellowDiv2 ol {
+    transform: rotate(15deg);
+}
+#yellowDiv1 h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+#yellowDiv2 ol li {
+    padding-bottom: 10px;
+    line-height: 2;
+}

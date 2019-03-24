@@ -1,14 +1,22 @@
 {% extends "base_books.html" %}
 
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'books/css/booksDetail.css' %}" />
+{% endblock %}
+
 {% block content %}
-<h1>{{ object.title }}</h1>
+<h2>{{ object.title }}</h2>
 <br>
-<li>Authors:
-{% for author in object.authors.all %}
-    {{ author }}
-    {% if not forloop.last %},{% else %}{% endif %}
-{% endfor %}
-</li>
-<li>Publisher: {{ object.publisher }}</li>
-<li>Publication date: {{ object.publication_date }}</li>
+<ul id="ulDetail">
+    <li>저자:
+    {% for author in object.authors.all %}
+        {{ author }}
+        {% if not forloop.last %},{% else %}{% endif %}
+    {% endfor %}
+    </li>
+    <li>출판사: {{ object.publisher }}</li>
+    <li>출판일: {{ object.publication_date }}</li>
+</ul>
 {% endblock content %}

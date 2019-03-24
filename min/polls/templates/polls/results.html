@@ -1,0 +1,19 @@
+{% extends "base_polls.html" %}
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'polls/css/pollResults.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div id="whiteDiv">
+    <h2>{{ question.question_text }}</h2>
+
+    <ul>
+    {% for choice in question.choice_set.all %}
+        <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'polls:detail' question.id %}"><input type="button" value="뒤로가기"></a>
+</div>
+{% endblock content %}

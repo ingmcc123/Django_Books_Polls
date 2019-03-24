@@ -1,10 +1,208 @@
-{% extends "base.html" %}
+{% load static %}
 
-{% block content %}
-    <h2>애플리케이션</h2>
-    <ul>
-        {% for key, value in verbose_dict.items %}
-            <li><a href="{% url key|add:':index' %}">{{ value }}</a></li>
-        {% endfor %}
-    </ul>
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minchang Cheon</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+        html,body{ margin:0; padding:0; width:100%; height:100%;}
+        .box{ width:100%; height:100%; position:relative;}
+    </style>
+
+    <script src="../static/js/jquery.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            $(".box").each(function () {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } else if (event.detail) delta = -event.detail / 3;
+                    var moveTop = null;
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(this).next() != undefined) {
+                            moveTop = $(this).next().offset().top;
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(this).prev() != undefined) {
+                            moveTop = $(this).prev().offset().top;
+                        }
+                    }
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 500, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- 왼쪽 상단 Name -->
+    <div id="navName">
+        <h3><a href="#box1">Minchang Cheon</a></h3>
+    </div>
+    <!-- 왼쪽 Scroll Menu -->
+    <div id="navScroll">
+        <nav>
+            <ul>
+                <li><a href="#box1">Home</a></li>
+                <li><a href="#box2">Intro</a></li>
+                <li><a href="#box3">Skills</a></li>
+                <li><a href="#box4">Contact</a></li>
+            </ul>
+        </nav>
+    </div> 
+    <!-- Page 1 -->
+    <div class="box" id="box1">
+        <!-- 최상단 메뉴 -->
+        <nav id="navTop">
+            <ul>
+                <li><a href="#box1">Home</a></li>
+                <li><a href="#box2">Intro</a></li>
+                <li><a href="#box3">Skills</a></li>
+                <li><a href="#box4">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- 메인 Image -->
+        <header>
+            <div id="mainImgDiv">
+                <img src="../static/img/profileImg/MC1.jpg" id="mainImg" width="150px" height="150px" alt="Minchang Cheon">
+                <h3>천민창<small>(1988)</small></h3>
+                <h4>#오픈소스 #해커톤 #메이커톤<br><small>(2019년 목표)</small></h4><br>
+                <h4>좋은 하루 보내세요 : )</h4>
+            </div>
+        </header>
+    </div>
+    <!-- Page 2 -->
+    <div class="box" id="box2">
+        <section>
+            <!-- 왼쪽 Introduction -->
+            <article class="article1">
+                <div class="articleDiv">
+                    <h2>Introduction</h2>
+                    <div>
+                        <p>
+                            좋은 아이디어와 노트북으로 만들어낸 코드가<br>
+                            혁신적인 기술을 만들고 세상을 변화시켰다는<br>
+                            사실들이, 제가 프로그래머와 엔지니어들에게<br>
+                            존경심을 가지게 된 계기가 되었습니다.<br>
+                            저도 그분들과 함께 협엽하면서 좋은 작품으로<br>
+                            지금보다는 더 나은 내일을 만들고 싶습니다.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- 오른쪽 Experience -->
+            <article class="article2">
+                <div class="articleDiv">
+                    <h2>Experience</h2>
+                    <div>
+                        <ul>
+                            <li>대구 영남고등학교</li>
+                            <li>대구 계명대학교 세무학과</li>
+                            <li>대구 미래인재개발원 사물인터넷 교육과정</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <!-- Page 3 -->
+    <div class="box" id="box3">
+        <section>
+            <!-- 왼쪽 Programming -->
+            <article class="article1">
+                <div class="articleDiv">
+                    <h2>Programming</h2>
+                    <div>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript (+ jQuery)</li>
+                            <li>Python (+ Django)</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <!-- 오른쪽 Project -->
+            <article class="article2">
+                <div class="articleDiv">
+                    <h2>Project</h2>
+                    <div>
+                        <ul>
+                            {% for key, value in verbose_dict.items %}
+                                <li><a href="{% url key|add:':index' %} ">{{ value }}<small>&nbsp(built with Django)</small></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <!-- Page 4 -->
+    <div class="box">
+        <section id="box4" style="height:90%" >
+            <!-- 왼쪽 Personality -->
+            <article class="article1">
+                <div class="articleDiv">
+                    <h2>Personality</h2>
+                    <fieldset>
+                        <legend>INTP-T</legend>
+                        <img src="../static/img/profileImg/intp_t.png" width="350px" height="300px" alt="intp_t">
+                    </fieldset>
+            </article>
+            <!-- 오른쪽 Contact -->
+            <article class="article2">
+                <div class="articleDiv">
+                    <h2>Contact</h2>
+                    <div>
+                        <table>
+                            <tr>
+                                <td><img src="../static/img/iconImg/personIcon.png" width="18px" height="18px" alt="person"></td>
+                                <td><button onclick="window.open('../static/img/profileImg/MC.jpg', 'myPicture', 'width=300, height=300')">Minchang Cheon</button></td>
+                            </tr>
+                            <tr>
+                                <td><img src="../static/img/iconImg/phoneIcon.png" width="18px" height="18px" alt="phone"></td>
+                                <td><a href="sms:01021230724">Send SMS</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="../static/img/iconImg/emailIcon.png" width="18px" height="18px" alt="email"></td>
+                                <td><a href="mailto:ingmcc123@gmail.com">Send Email</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="../static/img/iconImg/homeIcon.png" width="18px" height="18px" alt="home"></td>
+                                <td><a href="http://styleondo.com/" target="_blank">Visit My Page</a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="../static/img/iconImg/githubIcon.png" width="18px" height="18px" alt="github"></td>
+                                <td><a href="https://github.com/ingmcc123" target="_blank">Visit Github</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- 최하단 Information -->
+        <footer id="box5" style="height:10%">
+            <h5><a href="tel:01021230724">Tel: 010-2123-0724</a>&nbsp/&nbsp
+                <a href="mailto:Email: ingmcc123@gamil.com">Email: ingmcc123@gamil.com</a><br>
+                Copyright 2019. Minchang Cheon all rights reserved.
+            </h5>
+        </footer>
+    </div>
+</body>
+</html>

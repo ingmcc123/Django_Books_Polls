@@ -2,20 +2,53 @@
 <html lang="ko">
 <head>
     {% load static %}
-    <link rel="stylesheet" href="{% static "admin/css/base.css" %}" />
-    <title>{% block title %}홈{%endblock %}</title>
+    <link rel="stylesheet" href="{% static 'admin/css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    {% block css %}{% endblock %}
+    <title>{% block title %}홈{% endblock %}</title>
+    <style>
+        #sidebar {
+            margin-bottom: 50px;
+            
+        }
+        #divOne {
+            float:right;
+            margin: 10px;
+        }
+        #divTwo {
+            margin: 0 auto;
+            padding: 10px 0px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        #divTwo ul {
+            text-align: center;
+        }
+        #divTwo ul li {
+            display: inline;
+            margin:0 30px;
+        }
+        div a {
+            font-size: 1.2em;
+        }
+    </style>
 </head>
-<body>
+<body id="body">
     <div id="sidebar">
         {% block sidebar %}
-        <ul>
-            <li><a href="/">홈으로</a></li>
-            <li><a href="/admin/">관리자</a></li>
-        </ul>
+        <div id="divOne">
+            <a href="/admin/" style="color:black">관리자</a>
+        </div>
+        <div id="divTwo">
+            <ul>
+                <li><strong><a href="/">홈으로</a></strong></li>
+                <li><strong><a href="/books/">도서 정보</a></strong></li>
+                <li><strong><a href="/polls/">설문 조사</a></strong></li>
+            </ul>
+        </div>
         {% endblock %}
         <br>
     </div>
-
     <div id="content">
         {% block content %}{% endblock %}
     </div>

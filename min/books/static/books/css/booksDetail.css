@@ -1,0 +1,26 @@
+/* 상속(base.html) */
+#content {
+    background: rgba(255, 255, 255, 0.5);
+    width: 500px;
+    margin: 100px auto;
+}
+
+#body {
+    background-image: url("../img/bgImg/bookDetail.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2 {
+    text-align: center;
+}
+ul li {
+    list-style: none;
+}
+#ulDetail li {
+    line-height: 3;
+    margin-left: 10px;
+}
+p {
+    line-height: 2;
+    font-size: 1.1em;
+}
