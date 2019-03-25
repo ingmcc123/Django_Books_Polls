@@ -1,0 +1,24 @@
+/* 상속(base.html) */
+#content {
+    background: rgba(255, 255, 255, 0.5);
+    width: 400px;
+    margin: 0 auto;
+}
+
+#body {
+    background-image: url("../img/bgImg/pollDetail.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#formDiv h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#formDiv form {
+    line-height: 3;
+    margin-left: 30%;
+}
+#formDiv input:last-of-type {
+    margin-left: 15%;
+}

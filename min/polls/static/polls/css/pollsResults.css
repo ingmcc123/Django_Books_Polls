@@ -1,0 +1,23 @@
+/* 상속(base.html) */
+#content {
+    background: rgba(255, 255, 255, 0.5);
+    width: 500px;
+    margin: 0 auto;
+}
+
+#body {
+    background-image: url("../img/bgImg/pollResults.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#whiteDiv ul li {
+    line-height: 3;
+    margin-left: 30%;
+}
+#whiteDiv h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+#whiteDiv a {
+    margin-left: 40%;
+}
