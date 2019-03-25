@@ -1,7 +1,11 @@
 # Django_Books_Polls
-This is Mypage.
 
+
+This is Mypage.
 I used HTML5 + CSS3 + jQuery + Python(Django).
+
+1. Download
+2. Go terminal(input: python manage.py runserver) in min directory
 
 ![1](https://user-images.githubusercontent.com/43161094/54888032-e26bd480-4edc-11e9-9446-138b86c2c926.jpg)
 ![2](https://user-images.githubusercontent.com/43161094/54888034-e26bd480-4edc-11e9-9a26-1c57d808af7a.jpg)
