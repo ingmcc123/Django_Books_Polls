@@ -1,7 +1,8 @@
 # Django_Books_Polls
 
 
-This is Mypage. [Click!](http://ingmcc123.pythonanywhere.com/)
+This is Mypage. [>> Click!! <<](http://ingmcc123.pythonanywhere.com/)
+
 I used HTML5 + CSS3 + jQuery + Python(Django).
 
 1. Download
