@@ -8,10 +8,10 @@ I used HTML5 + CSS3 + jQuery + Python(Django).
 1. Download
 2. Go terminal(input: python manage.py runserver) in min directory
 
-![1](https://user-images.githubusercontent.com/43161094/54888032-e26bd480-4edc-11e9-9446-138b86c2c926.jpg)
-![2](https://user-images.githubusercontent.com/43161094/54888034-e26bd480-4edc-11e9-9a26-1c57d808af7a.jpg)
-![3](https://user-images.githubusercontent.com/43161094/54888035-e3046b00-4edc-11e9-945d-c9dc21849508.jpg)
-![4](https://user-images.githubusercontent.com/43161094/54888036-e3046b00-4edc-11e9-9d6f-607c25225f6c.jpg)
+<img width="1389" alt="Screen Shot 2019-04-09 at 9 45 20 PM" src="https://user-images.githubusercontent.com/43161094/55801588-59c27a80-5b11-11e9-8bf0-3c23233643c8.png">
+<img width="1389" alt="Screen Shot 2019-04-09 at 9 45 34 PM" src="https://user-images.githubusercontent.com/43161094/55801589-59c27a80-5b11-11e9-86df-26e6ab5e6eb3.png">
+<img width="1389" alt="Screen Shot 2019-04-09 at 9 45 43 PM" src="https://user-images.githubusercontent.com/43161094/55801590-59c27a80-5b11-11e9-96e3-c3103da2f7a2.png">
+<img width="1389" alt="Screen Shot 2019-04-09 at 9 45 57 PM" src="https://user-images.githubusercontent.com/43161094/55801592-5a5b1100-5b11-11e9-9210-24d4d186b62a.png">
 ![5](https://user-images.githubusercontent.com/43161094/54888037-e3046b00-4edc-11e9-902c-73f9ba153641.jpg)
 ![6](https://user-images.githubusercontent.com/43161094/54888038-e3046b00-4edc-11e9-81dd-b532133ea85f.jpg)
 ![7](https://user-images.githubusercontent.com/43161094/54888039-e39d0180-4edc-11e9-99d9-a911b7aaad8c.jpg)
