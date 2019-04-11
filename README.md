@@ -9,8 +9,8 @@ I used HTML5 + CSS3 + jQuery + Python(Django).
 2. Go terminal(input: python manage.py runserver) in min directory
 
 <img width="1389" alt="Screen Shot 2019-04-09 at 9 45 20 PM" src="https://user-images.githubusercontent.com/43161094/55801588-59c27a80-5b11-11e9-8bf0-3c23233643c8.png">
-<img width="1389" alt="Screen Shot 2019-04-09 at 9 45 34 PM" src="https://user-images.githubusercontent.com/43161094/55801589-59c27a80-5b11-11e9-86df-26e6ab5e6eb3.png">
-<img width="1389" alt="Screen Shot 2019-04-09 at 9 45 43 PM" src="https://user-images.githubusercontent.com/43161094/55801590-59c27a80-5b11-11e9-96e3-c3103da2f7a2.png">
+![11](https://user-images.githubusercontent.com/43161094/55971719-012fe080-5cbd-11e9-8e92-212e1b62e546.jpg)
+![22](https://user-images.githubusercontent.com/43161094/55971720-01c87700-5cbd-11e9-837f-543b1b884c2b.jpg)
 <img width="1389" alt="Screen Shot 2019-04-09 at 9 45 57 PM" src="https://user-images.githubusercontent.com/43161094/55801592-5a5b1100-5b11-11e9-9210-24d4d186b62a.png">
 <img width="1389" alt="Screen Shot 2019-04-09 at 9 51 50 PM" src="https://user-images.githubusercontent.com/43161094/55801821-dead9400-5b11-11e9-9ebc-9a38bc9ed58e.png">
 <img width="1403" alt="Screen Shot 2019-04-09 at 9 52 03 PM" src="https://user-images.githubusercontent.com/43161094/55801824-dead9400-5b11-11e9-9ee6-f232cba43318.png">
